@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Trip;
+use App\Models\Country;
 
 class TripController extends Controller
 {
@@ -40,7 +41,19 @@ class TripController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'available_seats' => 'required|integer|min:1',
+            'country_ids' => 'required|array',
+            'country_ids.*' => 'exists:countries,id'
+        ]);
+
+        $trip = Trip::create([
+            'available_seats' => $request->available_seats,
+        ]);
+
+        $trip->countries()->attach($request->country_ids);
+
+        return response()->json($trip->load('countries'), 201);
     }
 
     /**
@@ -54,16 +67,36 @@ class TripController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Trip $trip)
     {
-        //
+        $request->validate([
+            'available_seats' => 'sometimes|required|integer|min:1',
+            'country_ids' => 'sometimes|required|array',
+            'country_ids.*' => 'exists:countries,id'
+        ]);
+
+        if ($request->has('available_seats')) {
+            $trip->update([
+                'available_seats' => $request->available_seats
+            ]);
+        }
+
+        if ($request->has('country_ids')) {
+            $trip->countries()->sync($request->country_ids);
+        }
+
+        return response()->json($trip->load('countries'), 200);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Trip $trip)
     {
-        //
+        $trip->delete();
+        return response()->json([
+            'message' => 'Trip deleted successfully',
+            200
+        ]);
     }
 }
