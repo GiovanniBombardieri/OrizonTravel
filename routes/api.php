@@ -17,3 +17,5 @@ Route::post('trips', [TripController::class, 'store']);  // Crea un nuovo viaggi
 Route::get('trips/{trip}', [TripController::class, 'show']); // Mostra un viaggio specifico
 Route::put('trips/{trip}', [TripController::class, 'update']); // Aggiorna un viaggio
 Route::delete('trips/{trip}', [TripController::class, 'destroy']); // Elimina un viaggio
+
+Route::get('prova', ['ciao tutto bene']);

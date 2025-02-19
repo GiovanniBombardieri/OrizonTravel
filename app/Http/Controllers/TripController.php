@@ -33,7 +33,7 @@ class TripController extends Controller
             $query->where('available_seats', '<=', $request->max_seats);
         }
 
-        return response()->json($query->with('countries')->get());
+        return response()->json($query->with('countries')->get(), 200);
     }
 
     /**
