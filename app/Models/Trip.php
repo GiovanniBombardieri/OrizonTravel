@@ -9,7 +9,7 @@ class Trip extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['avaible_seats'];
+    protected $fillable = ['available_seats'];
 
     // Relazione molti-a-molti con Country
     public function countries()

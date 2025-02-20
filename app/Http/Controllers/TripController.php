@@ -59,9 +59,11 @@ class TripController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Trip $trip)
     {
-        //
+        $trip->load('countries');
+
+        return response()->json($trip, 200);
     }
 
     /**
@@ -94,9 +96,11 @@ class TripController extends Controller
     public function destroy(Trip $trip)
     {
         $trip->delete();
-        return response()->json([
-            'message' => 'Trip deleted successfully',
+        return response()->json(
+            [
+                'message' => 'Trip deleted successfully'
+            ],
             200
-        ]);
+        );
     }
 }
