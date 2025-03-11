@@ -1,66 +1,219 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![GitHub contributors](https://img.shields.io/github/contributors/giovanniBombardieri/FruityVice)
+![Github issues](https://img.shields.io/github/issues/giovanniBombardieri/FruityVice)
+![GitHub forks](https://img.shields.io/github/forks/giovanniBombardieri/FruityVice?style=flat)
+![Github stars](https://img.shields.io/github/stars/giovanniBombardieri/FruityVice?style=flat&color=%23EF2D5E)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giovanni-bombardieri-13ba7021b/)
+
+<!-- PROJECT -->
+<h1 align="center">OrizonTravel</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <a href="https://github.com/GiovanniBombardieri/Improve">View Demo</a>
+  ·
+  <a href="https://github.com/GiovanniBombardieri/Improve/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+  ·
+  <a href="https://github.com/GiovanniBombardieri/Improve/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
 </p>
 
-## About Laravel
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#specifications">Specifications</a></li>
+        <li><a href="#project-structure">Project Structure</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#system-requirements">System Requirements</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#useful-commands">Useful Commands</a></li>
+      </ul>
+    </li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+  </ol>
+</details>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Orizon is a travel agency created to help people discover sustainable travel experiences that can broaden their horizons. <br>
+Here you find the RESTful JSON APIs that will help the agency to promote last minute deals.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learning Laravel
+<!-- BUILD WITH -->
+### Built With
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* ![Laravel](https://img.shields.io/badge/-Laravel-333333?style=flat&logo=laravel)
+* ![PHP](https://img.shields.io/badge/-PHP-333333?style=flat&logo=php)
+* ![MySQL](https://img.shields.io/badge/-MySQL-333333?style=flat&logo=mysql)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<!-- SPECIFICATIONS -->
+### Specifications
 
-## Laravel Sponsors
+* The APIs are all REST compliant, especially regarding naming, methods and response status codes.
+* The APIs allow the insertion, modification and deletion of a country that will have only one characteristic: the name.
+* The APIs allow the insertion, modification and deletion of a trip that will have the following characteristics: the countries that involve the trip, the number of available places.
+* Finally, the APIs allow you to view all the trips entered, filter them by country and by number of available places.
+* MySQL was used as a database to store your information.
+* You can find a migrations.sql file to reconstruct the structure of your database.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Premium Partners
+<!-- PROJECT STRUCTURE -->
+### Project structure
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+```
+OrizonTravel/
+├── app/                      # Root directory of the Laravel application
+│   ├── Http/                 # Contains controllers, middleware and requests
+│   │   ├── Controllers/      # Application controllers
+│   ├── Models/               # Eloquent templates
+│   ├── Providers/            # Laravel Service Providers
+│
+├── database/                 # Database configuration and migrations
+│   ├── migrations/           # Migration files
+│   ├── seeders/              # Seeder to populate database
+│   ├── factories/            # Factory to generate dummy data
+│
+├── public/                   # Contains public assets (images, CSS, JS)
+│
+├── resources/                # Assets for views and components
+│
+├── routes/                   # Route definition
+│   ├── web.php               # Frontend routes
+│   ├── api.php               # API routes
+│   ├── console.php           # Custom Artisan commands
+│
+├── storage/                  # Log, cache and uploaded file storage
+│
+├── artisan                   # Laravel CLI
+├── composer.json             # PHP dependency management
+├── package.json              # JavaScript dependency management (if used)
+├── .env                      # Environment configuration
 
-## Contributing
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Code of Conduct
+## Getting Started
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### System Requirements
 
-## Security Vulnerabilities
+To run this application, make sure you have the following requirements:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* PHP ≥ 8.1
+* Composer
+* MySQL / PostgreSQL (or another database supported by Laravel)
+* Node.js (optional, if using assets built with Vite or Webpack)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Installation
+
+Follow these steps to setup the application locally:
+
+- **Clone the repository:**
+
+```bash
+git clone https://github.com/your-user/your-repository.git
+cd your-repository
+```
+
+- **Install PHP dependencies:**
+
+```bash
+composer install
+```
+
+- **Create the .env file and set up environment variables:**
+
+```bash
+cp .env.example .env
+```
+
+- **Generate the application key:**
+
+```bash
+php artisan key:generate
+```
+
+- **Set up the database in the .env file, then run the migrations:**
+
+```bash
+php artisan migrate --seed
+```
+
+- **(Optional) Install the frontend dependencies and build the assets:**
+
+```bash
+npm install && npm run dev
+```
+
+- **Start the development server:**
+
+```bash
+php artisan serve
+```
+
+L'applicazione sarà accessibile su ```http://127.0.0.1:8000/.```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Useful Commands
+
+Here are some useful commands to work with the application:
+
+- Start the local server: ```php artisan serve```
+
+- Perform migrations: ```php artisan migrate```
+
+- Create a controller: ```php artisan make:controller ControllerName```
+
+- Clear the cache: ```php artisan cache:clear```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Giovanni - [@linkedin](https://www.linkedin.com/in/giovanni-bombardieri-13ba7021b/) - g.bombardieri06@gmail.com
+
+Project Link: [https://github.com/GiovanniBombardieri/OrizonTravel](https://github.com/GiovanniBombardieri/OrizonTravel)
+
+<p align="right">(<a href="#start">back to top</a>)</p>
